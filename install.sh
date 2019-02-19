@@ -8,7 +8,7 @@
 echo "Installing GCX AndroidStudio code style..."
 echo ""
 
-LATEST_CODE_STYLE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/styles/grandcentrix.xml"
+LATEST_CODE_STYLE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/styles/apprenticefs.xml"
 if [ "$1" != "" ]; then
   lastChar=${1: -1}
   if [[ $lastChar == '/' ]]; then
@@ -29,11 +29,11 @@ do
   echo "Copying..."
   cp -frv ${LATEST_CODE_STYLE} ${target}/codestyles/
   if [ "$1" != "" ]; then
-    echo "Renaming grandcentrix.xml to Project.xml"
-    mv ${target}/codestyles/grandcentrix.xml ${target}/codestyles/Project.xml
+    echo "Renaming apprenticefs.xml to Project.xml"
+    mv ${target}/codestyles/apprenticefs.xml ${target}/codestyles/Project.xml
   fi
 done
 
 echo ""
 echo "Done."
-echo "Restart AndroidStudio. Go to Preferences->Editor->Code Style and apply Scheme 'grandcentrix'."
+echo "Restart AndroidStudio. Go to Preferences->Editor->Code Style and apply Scheme 'apprenticefs'."
